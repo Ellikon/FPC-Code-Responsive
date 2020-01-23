@@ -50,7 +50,7 @@ h2 {
 	width: 100%;
 	text-align: center;
 	padding: 20px 50px;
-	font-size: 46px;
+	font-size: 60px;
 	margin-top: 0px;
 	margin-bottom: 50px;
 }
@@ -108,12 +108,35 @@ h2 {
 
 .home-page-column {
 	float: left;
-	width: 50%;
+	width: 100%;
 	height: 750px;
 }
 
+.home-page-column .home-page-column-text {
+	width: 85%;
+	margin: auto;
+	background-color: red;
+}
+
+.home-page-column-text p {
+	font-size: 18;
+	color: #f0f1eb;
+}
+
+.home-page-column .home-page-column-image {
+	width: 85%;
+	margin: auto;
+}
+
+.home-page-column-image img {
+	width: 100%;
+	height: 250px;
+	object-fit: cover;
+	border-radius: 2.5px;
+}
+
 .home-page-columns h2 {
-	font-size: 36px;
+	font-size: 48px;
 }
 
 #web-hosting {
@@ -130,13 +153,6 @@ h2 {
 
 #learning h2 {
 	background-color: #a94156;
-}
-
-.home-page-column .text {
-	background-color: #778e80;
-	width: 75%;
-	height: 75%;
-	margin: auto;
 }
 
 .project-highlights {
@@ -175,6 +191,16 @@ h2 {
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
+	.home-page-columns:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+
+	.home-page-column {
+		float: left;
+		width: 50%;
+	}
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
