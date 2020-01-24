@@ -2,258 +2,326 @@
 *,
 *::before,
 *::after {
-	margin: 0px;
-	padding: 0px;
-	box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
 }
 
 *:focus {
-	outline: none !important;
+    outline: none !important;
 }
 
 html,
 body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
-		"Open Sans", "Helvetica Neue", sans-serif;
-	letter-spacing: 0px;
-	color: #f0f1eb;
-	background: #f0f1eb;
-	height: 100%;
-	width: 100%;
-	font-size: 0px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+        "Open Sans", "Helvetica Neue", sans-serif;
+    letter-spacing: 0px;
+    color: #f0f1eb;
+    background: #f0f1eb;
+    height: 100%;
+    width: 100%;
+    font-size: 0px;
 }
 
 /* Menu */
 header {
-	width: 100%;
-	height: 75px;
-	background: rgba(33, 41, 34, 1);
-	margin: auto;
-	align-items: center;
-	top: 0;
-	transition: 0.25s;
+    font-family: HindLight, sans-serif;
+    display: flex;
+    background: rgba(33, 41, 34, 1);
+    width: 100%;
+    height: 75px;
+    padding: 0vh 5vw;
+    margin: auto;
+    align-items: center;
+    top: 0;
+    transition: 0.25s;
 }
 
-.menu-items {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	vertical-align: middle;
-	transition: 0.25s;
-	list-style: none;
-	letter-spacing: 1.5px;
+.logo-container,
+.nav-links,
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.25s;
+}
+
+.logo-container {
+    flex: 1;
+    align-items: center;
+    justify-content: flex-start;
+    vertical-align: middle;
+    float: right;
+    clear: right;
+}
+
+.logo-container a {
+    text-decoration: none;
+}
+
+.logo-container img {
+    height: 35px;
+    margin: 0;
+    margin-right: 10px;
+    vertical-align: middle;
 }
 
 nav {
-	flex: 1;
+    flex: 3;
 }
 
-.menu-items {
-	list-style: none;
-	letter-spacing: 1.25px;
-	text-align: center;
-	margin: auto;
+.nav-links {
+    list-style: none;
+    letter-spacing: 1.25px;
 }
 
-.menu-item:hover {
-	color: #939a9c;
+.nav-links a:hover {
+    color: #939a9c;
 }
 
-.menu-items a {
-	text-decoration: none;
+.nav-link {
+    color: #f0f1eb;
+    font-size: 16px;
+    text-decoration: none;
+    transition: 0.25s;
+    margin: 15px;
 }
 
-.menu-item {
-	color: #f0f1eb;
-	font-size: 16px;
-	text-decoration: none;
-	transition: 0.25s;
-	margin: 0 15px;
+.burger {
+    display: none;
+    cursor: pointer;
+    float: right;
+    clear: right;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #f0f1eb;
+    transition: all 0.25s ease;
+    border-radius: 5px;
+}
+
+.line2 {
+    margin: 5px 0;
+}
+
+.overlay {
+    position: absolute;
+    filter: blur(8px);
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
 }
 
 /* Main margins */
 main {
-	margin-bottom: 250px;
-	margin-top: 75px;
+    margin-bottom: 250px;
+    margin-top: 75px;
 }
 
 /* Heading Styles */
 
 .project-highlights h2 {
-	background-color: #779869;
-	color: #f0f1eb;
-	width: 100%;
-	text-align: center;
-	padding: 20px 50px;
-	font-size: 60px;
-	margin-top: 0px;
-	margin-bottom: 50px;
+    background-color: #779869;
+    color: #f0f1eb;
+    width: 100%;
+    text-align: center;
+    padding: 20px 50px;
+    font-size: 60px;
+    margin-top: 0px;
+    margin-bottom: 50px;
 }
 
 /* Page banner */
 .page-banner {
-	width: 100%;
-	height: calc(100vh - 75px - 500px);
-	margin: 0px;
-	padding: 0px;
-	position: relative;
+    width: 100%;
+    height: calc(100vh - 75px);
+    margin: 0px;
+    padding: 0px;
+    position: relative;
 }
 
 .page-banner .page-banner-image {
-	height: 100%;
+    height: 100%;
 }
 
 .page-banner-image img {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	margin: 0px;
-	padding: 0px;
-	filter: brightness(50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: 0px;
+    padding: 0px;
+    filter: brightness(50%);
 }
 
 .page-banner-text {
-	position: absolute;
-	width: 100%;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .page-banner-text h1 {
-	font-size: 75px;
-	font-weight: bold;
-	color: #f0f1eb;
-	padding: 0 5vw;
-	margin: 0;
-	text-align: center;
+    font-size: 75px;
+    font-weight: bold;
+    color: #f0f1eb;
+    padding: 0 5vw;
+    margin: 0;
+    text-align: center;
+}
+
+.page-banner-button {
+    display: flex;
+    display: none;
+    justify-content: center;
+}
+
+.page-banner-button button {
+    background-color: #6e7869;
+    border: none;
+    color: #f0f1eb;
+    width: 300px;
+    height: 100px;
+    font-size: 32px;
+    border-radius: 5px;
+    transition: 0.25s;
+    cursor: pointer;
+    position: absolute;
+    bottom: 150px;
+}
+
+.page-banner-button button:hover {
+    background-color: #939a9c;
 }
 
 /* Columns */
 .column-half {
-	width: 50%;
+    width: 50%;
 }
 
 /* Home Page Columns */
 .home-page-columns:after {
-	content: "";
-	display: table;
-	clear: both;
+    content: "";
+    display: table;
+    clear: both;
 }
 
 .home-page-column {
-	width: 100%;
-	height: 750px;
-	position: relative;
+    width: 100%;
+    height: 750px;
+    position: relative;
 }
 
 .home-page-column .home-page-column-header {
-	height: 20%;
-	text-align: center;
-	align-content: center;
-	vertical-align: middle;
-	display: flex;
-	margin: auto;
+    height: 20%;
+    text-align: center;
+    align-content: center;
+    vertical-align: middle;
+    display: flex;
+    margin: auto;
 }
 
 .home-page-column-header h2 {
-	font-size: 50px;
-	margin: auto;
-	text-align: center;
+    font-size: 50px;
+    margin: auto;
+    text-align: center;
 }
 
 #web-hosting {
-	background-color: #746a79;
+    background-color: #746a79;
 }
 
 #web-hosting .home-page-column-header {
-	background-color: #211f26;
+    background-color: #211f26;
 }
 
 #learning {
-	background-color: #67968d;
+    background-color: #67968d;
 }
 
 #learning .home-page-column-header {
-	background-color: #2c5f5c;
+    background-color: #2c5f5c;
 }
 
 .home-page-column .home-page-column-text {
-	width: 85%;
-	margin: auto;
-	text-align: left;
-	margin-top: 25px;
-	margin-bottom: 50px;
+    width: 85%;
+    margin: auto;
+    text-align: left;
+    margin-top: 25px;
+    margin-bottom: 50px;
 }
 
 .home-page-column-text p {
-	font-size: 20px;
-	color: #f0f1eb;
+    font-size: 20px;
+    color: #f0f1eb;
 }
 
 .home-page-column .home-page-column-image {
-	width: 85%;
-	margin: auto;
+    width: 85%;
+    margin: auto;
 }
 
 .home-page-column-image img {
-	width: 100%;
-	height: 200px;
-	object-fit: cover;
-	border-radius: 5px;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
 }
 
 .home-page-column .home-page-column-button {
-	display: flex;
-	justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 
 .home-page-column-button button {
-	border: none;
-	color: #f0f1eb;
-	width: 200px;
-	height: 75px;
-	font-size: 24px;
-	border-radius: 2.5px;
-	transition: 0.25s;
-	cursor: pointer;
-	position: absolute;
-	bottom: 50px;
+    border: none;
+    color: #f0f1eb;
+    width: 200px;
+    height: 75px;
+    font-size: 24px;
+    border-radius: 2.5px;
+    transition: 0.25s;
+    cursor: pointer;
+    position: absolute;
+    bottom: 50px;
 }
 
 #web-hosting .home-page-column-button button {
-	background-color: #211f26;
+    background-color: #211f26;
 }
 
 #learning .home-page-column-button button {
-	background-color: #2c5f5c;
+    background-color: #2c5f5c;
 }
 
 #web-hosting .home-page-column-button:hover button,
 #learning .home-page-column-button:hover button {
-	background-color: #808183;
+    background-color: #808183;
 }
 
 .project-highlights {
-	text-align: center;
-	margin: auto;
+    text-align: center;
+    margin: auto;
 }
 
 .projects {
-	display: inline-block;
-	margin: auto;
+    display: inline-block;
+    margin: auto;
 }
 
 .project {
-	background-color: #778e80;
-	display: inline-block;
-	width: 250px;
-	height: 150px;
-	padding: 0 25px;
-	margin: 0px 50px;
-	margin-bottom: 50px;
-	color: #f0f1eb;
-	border-radius: 5px;
+    background-color: #778e80;
+    display: inline-block;
+    width: 250px;
+    height: 150px;
+    padding: 0 25px;
+    margin: 0px 50px;
+    margin-bottom: 50px;
+    color: #f0f1eb;
+    border-radius: 5px;
 }
 
 /* Extra small devices (phones, 600px and down) */
@@ -266,44 +334,44 @@ main {
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-	.home-page-columns:after {
-		content: "";
-		display: table;
-		clear: both;
-	}
+    .home-page-columns:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
 
-	.home-page-column {
-		float: left;
-		width: 50%;
-		height: 575px;
-	}
+    .home-page-column {
+        float: left;
+        width: 50%;
+        height: 575px;
+    }
 
-	.home-page-column-content {
-		display: flex;
-	}
+    .home-page-column-content {
+        display: flex;
+    }
 
-	.home-page-column-content:after {
-		content: "";
-		display: table;
-		clear: both;
-	}
+    .home-page-column-content:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
 
-	.home-page-column .home-page-column-text {
-		width: 40%;
-		float: left;
-		margin-top: 25px;
-		margin-bottom: 50px;
-	}
+    .home-page-column .home-page-column-text {
+        width: 40%;
+        float: left;
+        margin-top: 25px;
+        margin-bottom: 50px;
+    }
 
-	.home-page-column-text p {
-		font-size: 18px;
-	}
+    .home-page-column-text p {
+        font-size: 18px;
+    }
 
-	.home-page-column .home-page-column-image {
-		width: 175px;
-		float: left;
-		margin-top: 25px;
-	}
+    .home-page-column .home-page-column-image {
+        width: 175px;
+        float: left;
+        margin-top: 25px;
+    }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -316,11 +384,11 @@ main {
 
 /* Configure fonts */
 @font-face {
-	font-family: HindLight;
-	src: url("/Fonts/Hind/Hind-Light.ttf");
+    font-family: HindLight;
+    src: url("/Fonts/Hind/Hind-Light.ttf");
 }
 
 @font-face {
-	font-family: HindRegular;
-	src: url("/Fonts/Hind/Hind-Regular.ttf");
+    font-family: HindRegular;
+    src: url("/Fonts/Hind/Hind-Regular.ttf");
 }
