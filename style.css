@@ -1,3 +1,4 @@
+/*#region Basic Settings*/
 /* Basic settings for the entire page */
 *,
 *::before,
@@ -22,8 +23,9 @@ body {
     width: 100%;
     font-size: 0px;
 }
+/*#endregion Basic Settings*/
 
-/* Menu */
+/*#region Menu*/
 header {
     font-family: HindLight, sans-serif;
     display: flex;
@@ -114,14 +116,13 @@ nav {
     bottom: 0;
     right: 0;
 }
+/*#endregion Menu*/
 
 /* Main margins */
 main {
     margin-bottom: 250px;
     margin-top: 75px;
 }
-
-/* Heading Styles */
 
 .project-highlights h2 {
     background-color: #779869;
@@ -134,7 +135,7 @@ main {
     margin-bottom: 50px;
 }
 
-/* Page banner */
+/*#region Page Banner*/
 .page-banner {
     width: 100%;
     height: calc(100vh - 75px);
@@ -161,7 +162,7 @@ main {
     width: 100%;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -100%);
 }
 
 .page-banner-text h1 {
@@ -175,7 +176,6 @@ main {
 
 .page-banner-button {
     display: flex;
-    display: none;
     justify-content: center;
 }
 
@@ -190,19 +190,20 @@ main {
     transition: 0.25s;
     cursor: pointer;
     position: absolute;
-    bottom: 150px;
+    bottom: 50px;
 }
 
 .page-banner-button button:hover {
     background-color: #939a9c;
 }
+/*#endregion Page Banner*/
 
 /* Columns */
 .column-half {
     width: 50%;
 }
 
-/* Home Page Columns */
+/*#region Home Page Columns*/
 .home-page-columns:after {
     content: "";
     display: table;
@@ -301,7 +302,9 @@ main {
 #learning .home-page-column-button:hover button {
     background-color: #808183;
 }
+/*#endregion Home Page Columns*/
 
+/*#region Project Highlights*/
 .project-highlights {
     text-align: center;
     margin: auto;
@@ -323,7 +326,9 @@ main {
     color: #f0f1eb;
     border-radius: 5px;
 }
+/*#endregion Project Highlights*/
 
+/*#region Media Queries*/
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
 }
@@ -381,14 +386,15 @@ main {
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
 }
+/*#endregion Media Queries*/
 
 /* Configure fonts */
 @font-face {
     font-family: HindLight;
-    src: url("/Fonts/Hind/Hind-Light.ttf");
+    src: url("./fonts/Hind-Light.ttf");
 }
 
 @font-face {
     font-family: HindRegular;
-    src: url("/Fonts/Hind/Hind-Regular.ttf");
+    src: url("./fonts/Hind-Regular.ttf");
 }
