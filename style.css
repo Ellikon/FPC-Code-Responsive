@@ -319,9 +319,12 @@ main {
 	background-color: #2c5f5c;
 }
 
-#web-hosting .home-page-column-button:hover button,
+#web-hosting .home-page-column-button:hover button {
+	background-color: #879094;
+}
+
 #learning .home-page-column-button:hover button {
-	background-color: #808183;
+	background-color: #817c78;
 }
 /*#endregion Home Page Columns*/
 
