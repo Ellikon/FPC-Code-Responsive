@@ -126,7 +126,7 @@ main {
 }
 
 .project-highlights h2 {
-    background-color: #779869;
+    background-color: #2c3d2a;
     color: #f0f1eb;
     width: 100%;
     text-align: center;
@@ -248,6 +248,10 @@ main {
     background-color: #2c5f5c;
 }
 
+.home-page-column .home-page-column-content {
+    height: 500;
+}
+
 .home-page-column .home-page-column-image {
     width: 85%;
     margin: auto;
@@ -255,9 +259,13 @@ main {
     display: block;
 }
 
+.home-page-column-content .home-page-column-image {
+    height: 100%;
+}
+
 .home-page-column-image img {
     width: 300px;
-    height: 200px;
+    height: 100%;
     object-fit: cover;
     border-radius: 5px;
     margin-left: auto;
@@ -270,6 +278,10 @@ main {
     margin: auto;
     text-align: left;
     margin-top: 50px;
+}
+
+.home-page-column-content .home-page-column-text {
+    height: 100%;
 }
 
 .home-page-column-text p {
