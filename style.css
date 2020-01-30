@@ -130,11 +130,18 @@ nav {
 }
 /*#endregion Menu*/
 
+/*#region Content Settings*/
 /* Main margins */
 main {
 	margin-bottom: 250px;
 	margin-top: 75px;
 }
+
+/* Columns */
+.column-half {
+	width: 50%;
+}
+/*#endregion Content Settings*/
 
 /*#region Page Banner*/
 .page-banner {
@@ -201,11 +208,6 @@ main {
 	background-color: #939a9c;
 }
 /*#endregion Page Banner*/
-
-/* Columns */
-.column-half {
-	width: 50%;
-}
 
 /*#region Home Page Columns*/
 .home-page-columns:after {
