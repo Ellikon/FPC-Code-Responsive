@@ -216,7 +216,6 @@ main {
 	font-family: HindLight;
 	letter-spacing: 1.5px;
 	word-spacing: 1px;
-	border-radius: 5px;
 	transition: 0.25s;
 	cursor: pointer;
 	position: absolute;
@@ -237,7 +236,7 @@ main {
 
 .home-page-column {
 	width: 100%;
-	height: 650px;
+	height: 700px;
 	position: relative;
 }
 
@@ -274,7 +273,7 @@ main {
 
 .home-page-column .home-page-column-image {
 	width: 100%;
-	height: 150px;
+	height: 175px;
 	display: block;
 }
 
@@ -311,13 +310,11 @@ main {
 }
 
 .home-page-column-button button {
-	border: none;
 	color: var(--main-txt-color);
 	font-family: HindLight;
-	width: 200px;
-	height: 75px;
+	width: 250px;
+	height: 87.5px;
 	font-size: 24px;
-	border-radius: 2.5px;
 	transition: 0.25s;
 	cursor: pointer;
 	position: absolute;
@@ -325,10 +322,20 @@ main {
 }
 
 #web-hosting .home-page-column-button button {
+	border: 7.5px solid var(--main-web-dev-color);
+	background-color: var(--secondary-web-dev-color);
+}
+
+#web-hosting .home-page-column-button:hover button {
 	background-color: var(--main-web-dev-color);
 }
 
 #learning .home-page-column-button button {
+	border: 7.5px solid var(--main-learn-color);
+	background-color: var(--secondary-learn-color);
+}
+
+#learning .home-page-column-button:hover button {
 	background-color: var(--main-learn-color);
 }
 /*#endregion Home Page Columns*/
@@ -367,6 +374,7 @@ main {
 	height: 100%;
 	object-fit: cover;
 	filter: brightness(75%);
+	transition: 0.25s;
 }
 
 .project h3 {
@@ -378,6 +386,7 @@ main {
 	top: 15px;
 	left: 15px;
 	text-align: left;
+	transition: 0.25s;
 }
 
 .project-button {
@@ -388,7 +397,7 @@ main {
 .project-button button {
 	width: 100%;
 	height: 100%;
-	font-size: 24px;
+	font-size: 28px;
 	font-family: HindLight;
 	background-color: var(--main-btn-color);
 	color: var(--main-txt-color);
@@ -543,6 +552,10 @@ footer {
 @media only screen and (min-width: 992px) {
 	.home-page-column {
 		height: 750px;
+	}
+
+	.home-page-column .home-page-column-image {
+		height: 200px;
 	}
 }
 /*#endregion Large Devices*/
